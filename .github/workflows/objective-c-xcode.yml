@@ -19,6 +19,10 @@ jobs:
         with:
           repository: CoolBank/wallet-ios
           token: ${{ secrets.MY_PAT }}
+      - name: Checkout main-store
+        run: |
+          git pull
+          git checkout -b manual origin/manual
       
       - name: pod
         run: pod install --no-repo-update
