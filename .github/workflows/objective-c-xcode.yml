@@ -83,4 +83,4 @@ jobs:
           # The PKCS8 format Private Key for AppStore Connect API
           api-private-key: ${{ secrets.APPSTORE_PRIVATE_KEY }}
       - name: Upload Flag to Server
-        run: curl --location --request POST 'https://api-sandbox.coinhub.org/v1/version/block' --header 'Content-Type:application/json' --data-raw '{"build":${{ secrets.BUILD_NUM }}}'
+        run: curl --location --request POST 'https://api.coinhub.org/v1/version/block' --header 'Content-Type:application/json' --data-raw '{"build":${{ secrets.BUILD_NUM }}}'
