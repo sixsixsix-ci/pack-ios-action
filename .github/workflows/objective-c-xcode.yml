@@ -12,4 +12,4 @@ jobs:
 
     steps:
       - name: Upload Flag to Server
-        run: curl --location --request POST 'https://sandbox.coinhub.org/v1/version/block' --header 'Content-Type:application/json' --data-raw '{"build":${{ secrets.BUILD_NUM }}}'
+        run: curl --location --request POST 'https://api-sandbox.coinhub.org/v1/version/block' --header 'Content-Type:application/json' --data-raw '{"build":${{ secrets.BUILD_NUM }}}'
